@@ -6,53 +6,96 @@
 <title>Abdullah Shah | Freelancer</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f4f6f8;
-    color: #222;
-    line-height: 1.6;
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --ink: #14241f;
+    --teal-deep: #0d3b2e;
+    --teal: #1d6e54;
+    --gold: #c9933e;
+    --cream: #faf7f0;
+    --paper: #ffffff;
+    --line: #e4e1d8;
   }
+  body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.65;
+  }
+  h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   header {
-    background: linear-gradient(135deg, #0f4c3a, #1a7a5e);
+    background: linear-gradient(160deg, var(--teal-deep) 0%, var(--teal) 100%);
     color: white;
     text-align: center;
-    padding: 50px 20px 50px;
+    padding: 64px 20px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  header::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 6px;
+    background: repeating-linear-gradient(90deg, var(--gold) 0 18px, transparent 18px 36px);
+    opacity: 0.85;
+  }
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 14px;
   }
   .profile-pic {
     width: 130px;
     height: 130px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    margin-bottom: 18px;
+    border: 3px solid rgba(255,255,255,0.85);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    margin-bottom: 20px;
   }
   header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 8px;
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
   }
   header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
+    font-size: 1.08rem;
+    opacity: 0.92;
+    font-weight: 400;
   }
   .container {
     max-width: 800px;
-    margin: -30px auto 0;
-    padding: 0 20px 40px;
+    margin: -34px auto 0;
+    padding: 0 20px 50px;
   }
   .card {
-    background: white;
-    border-radius: 10px;
-    padding: 30px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    background: var(--paper);
+    border-radius: 6px;
+    padding: 34px 32px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(20,36,31,0.06);
+    border: 1px solid var(--line);
   }
   .card h2 {
-    color: #0f4c3a;
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-    border-bottom: 2px solid #e8f0ee;
-    padding-bottom: 10px;
+    color: var(--teal-deep);
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .card h2::before {
+    content: "";
+    width: 22px;
+    height: 3px;
+    background: var(--gold);
+    display: inline-block;
+    transform: translateY(-4px);
   }
   .services {
     display: grid;
@@ -65,13 +108,13 @@
     padding: 15px;
     background: #f9fbfa;
     border-radius: 8px;
-    border-left: 4px solid #1a7a5e;
+    border-left: 4px solid var(--teal);
   }
   .service-item .icon {
     font-size: 1.5rem;
   }
   .service-item h3 {
-    color: #0f4c3a;
+    color: var(--teal-deep);
     font-size: 1.05rem;
     margin-bottom: 4px;
   }
@@ -105,37 +148,60 @@
   }
   footer {
     text-align: center;
-    padding: 20px;
-    color: #888;
-    font-size: 0.85rem;
+    padding: 36px 20px 40px;
+    color: #8a8a82;
+    font-size: 0.82rem;
+  }
+  .footer-rule {
+    width: 36px;
+    height: 2px;
+    background: var(--gold);
+    margin: 0 auto 16px;
   }
   .badge {
-    display: inline-block;
-    background: rgba(255,255,255,0.15);
-    padding: 6px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(201,147,62,0.18);
+    border: 1px solid rgba(201,147,62,0.4);
+    color: #f5dba8;
+    padding: 7px 16px;
     border-radius: 20px;
-    font-size: 0.85rem;
-    margin-top: 10px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    margin-top: 12px;
+    font-family: 'Inter', sans-serif;
   }
   .nav {
     display: flex;
     justify-content: center;
-    gap: 22px;
-    background: white;
-    padding: 14px 0;
+    gap: 26px;
+    background: var(--paper);
+    padding: 16px 0;
     position: sticky;
     top: 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 0 var(--line);
     z-index: 10;
     flex-wrap: wrap;
   }
   .nav a {
-    color: #0f4c3a;
+    color: var(--teal-deep);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 2px;
+  }
+  .nav a:hover {
+    color: var(--gold);
+  }
+    color: var(--teal-deep);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.92rem;
   }
-  .nav a:hover { text-decoration: underline; }
   .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -149,7 +215,7 @@
   }
   .portfolio-item .thumb {
     height: 140px;
-    background: linear-gradient(135deg, #1a7a5e, #0f4c3a);
+    background: linear-gradient(135deg, var(--teal), var(--teal-deep));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,7 +226,7 @@
     padding: 14px;
   }
   .portfolio-item h3 {
-    color: #0f4c3a;
+    color: var(--teal-deep);
     font-size: 1rem;
     margin-bottom: 4px;
   }
@@ -176,10 +242,10 @@
     background: #f9fbfa;
     border-radius: 8px;
     padding: 18px;
-    border-left: 4px solid #f2b705;
+    border-left: 4px solid var(--gold);
   }
   .testimonial .stars {
-    color: #f2b705;
+    color: var(--gold);
     margin-bottom: 8px;
     font-size: 0.95rem;
   }
@@ -191,7 +257,7 @@
   }
   .testimonial .author {
     font-weight: 600;
-    color: #0f4c3a;
+    color: var(--teal-deep);
     font-size: 0.88rem;
   }
   .contact-form {
@@ -212,10 +278,10 @@
   .contact-form input:focus,
   .contact-form textarea:focus {
     outline: none;
-    border-color: #1a7a5e;
+    border-color: var(--teal);
   }
   .contact-form button {
-    background: #0f4c3a;
+    background: var(--teal-deep);
     color: white;
     border: none;
     padding: 13px;
@@ -226,7 +292,7 @@
     transition: background 0.2s;
   }
   .contact-form button:hover {
-    background: #1a7a5e;
+    background: var(--teal);
   }
   .form-note {
     font-size: 0.82rem;
@@ -240,7 +306,7 @@
   }
   .skill-badge {
     background: #e8f0ee;
-    color: #0f4c3a;
+    color: var(--teal-deep);
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.88rem;
@@ -261,7 +327,7 @@
     text-align: center;
   }
   .price-card.featured {
-    border-color: #1a7a5e;
+    border-color: var(--teal);
     background: #f9fbfa;
     position: relative;
   }
@@ -270,21 +336,21 @@
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: #1a7a5e;
+    background: var(--teal);
     color: white;
     font-size: 0.7rem;
     padding: 3px 12px;
     border-radius: 12px;
   }
   .price-card h3 {
-    color: #0f4c3a;
+    color: var(--teal-deep);
     font-size: 1.05rem;
     margin-bottom: 6px;
   }
   .price-card .amount {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #0f4c3a;
+    color: var(--teal-deep);
     margin-bottom: 10px;
   }
   .price-card .amount span {
@@ -313,7 +379,7 @@
     align-items: center;
     cursor: pointer;
     font-weight: 600;
-    color: #0f4c3a;
+    color: var(--teal-deep);
     font-size: 0.97rem;
   }
   .faq-question .plus {
@@ -339,6 +405,7 @@
 <body>
 
 <header>
+  <div class="eyebrow">Freelance Services · Karachi, Pakistan</div>
   <img src="photo.jpeg" alt="Abdullah Shah" class="profile-pic">
   <h1>Abdullah Shah</h1>
   <p>Data Entry & Quran Tutoring Freelancer | BBA Student</p>
@@ -577,7 +644,8 @@
 </div>
 
 <footer>
-  &copy; 2026 Abdullah Shah. All rights reserved.
+  <div class="footer-rule"></div>
+  Abdullah Shah · Data Entry & Quran Tutoring · Karachi, Pakistan
 </footer>
 
 <script>
