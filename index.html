@@ -1,10 +1,177 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Abdullah Shah</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdullah Shah | Freelancer</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(135deg, #0f4c3a, #1a7a5e);
+    color: white;
+    text-align: center;
+    padding: 60px 20px 50px;
+  }
+  header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+  }
+  header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+  .container {
+    max-width: 800px;
+    margin: -30px auto 0;
+    padding: 0 20px 40px;
+  }
+  .card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .card h2 {
+    color: #0f4c3a;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #e8f0ee;
+    padding-bottom: 10px;
+  }
+  .services {
+    display: grid;
+    gap: 15px;
+  }
+  .service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px;
+    background: #f9fbfa;
+    border-radius: 8px;
+    border-left: 4px solid #1a7a5e;
+  }
+  .service-item .icon {
+    font-size: 1.5rem;
+  }
+  .service-item h3 {
+    color: #0f4c3a;
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+  }
+  .service-item p {
+    font-size: 0.92rem;
+    color: #555;
+  }
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #f9fbfa;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #222;
+    transition: background 0.2s;
+  }
+  .contact-item:hover {
+    background: #e8f0ee;
+  }
+  .contact-item .icon {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-size: 0.85rem;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-top: 10px;
+  }
+</style>
 </head>
 <body>
-  <h1>Hello, I'm Abdullah Shah</h1>
-  <p>Data Entry & Marketing Freelancer | BBA Student</p>
+
+<header>
+  <h1>Abdullah Shah</h1>
+  <p>Data Entry & Quran Tutoring Freelancer | BBA Student</p>
+  <span class="badge">📖 Hafiz-e-Quran</span>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>About Me</h2>
+    <p>I'm a BBA student based in Karachi, Pakistan, working as a freelancer alongside my studies. I specialize in accurate data entry and copy-paste work, and I also teach Quran online as a certified Hafiz. I'm detail-oriented, reliable, and committed to delivering quality work on time.</p>
+  </div>
+
+  <div class="card">
+    <h2>Services</h2>
+    <div class="services">
+      <div class="service-item">
+        <span class="icon">📊</span>
+        <div>
+          <h3>Data Entry</h3>
+          <p>Fast and accurate data entry for spreadsheets, databases, and documents.</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <span class="icon">📋</span>
+        <div>
+          <h3>Copy Paste Work</h3>
+          <p>Reliable copy-paste tasks completed with attention to detail and quick turnaround.</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <span class="icon">📖</span>
+        <div>
+          <h3>Online Quran Tutoring</h3>
+          <p>One-on-one Quran recitation, Hifz revision, and Tajweed lessons as a Hafiz-e-Quran.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Get in Touch</h2>
+    <div class="contact-list">
+      <a class="contact-item" href="https://wa.me/923163409550" target="_blank">
+        <span class="icon">💬</span> WhatsApp: +92 316 3409550
+      </a>
+      <a class="contact-item" href="mailto:abdullahhafizshah2004@gmail.com">
+        <span class="icon">✉️</span> abdullahhafizshah2004@gmail.com
+      </a>
+      <a class="contact-item" href="https://www.linkedin.com/in/abdullah-shah-62b77a304" target="_blank">
+        <span class="icon">🔗</span> LinkedIn Profile
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2026 Abdullah Shah. All rights reserved.
+</footer>
+
 </body>
 </html>
