@@ -117,6 +117,122 @@
     font-size: 0.85rem;
     margin-top: 10px;
   }
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    background: white;
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    z-index: 10;
+    flex-wrap: wrap;
+  }
+  .nav a {
+    color: #0f4c3a;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .nav a:hover { text-decoration: underline; }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .portfolio-item {
+    background: #f9fbfa;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e8f0ee;
+  }
+  .portfolio-item .thumb {
+    height: 140px;
+    background: linear-gradient(135deg, #1a7a5e, #0f4c3a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: white;
+  }
+  .portfolio-item .info {
+    padding: 14px;
+  }
+  .portfolio-item h3 {
+    color: #0f4c3a;
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+  .portfolio-item p {
+    font-size: 0.85rem;
+    color: #666;
+  }
+  .testimonials-grid {
+    display: grid;
+    gap: 18px;
+  }
+  .testimonial {
+    background: #f9fbfa;
+    border-radius: 8px;
+    padding: 18px;
+    border-left: 4px solid #f2b705;
+  }
+  .testimonial .stars {
+    color: #f2b705;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+  }
+  .testimonial p.quote {
+    font-style: italic;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+  .testimonial .author {
+    font-weight: 600;
+    color: #0f4c3a;
+    font-size: 0.88rem;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 18px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    resize: vertical;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #1a7a5e;
+  }
+  .contact-form button {
+    background: #0f4c3a;
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 8px;
+    font-size: 0.98rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .contact-form button:hover {
+    background: #1a7a5e;
+  }
+  .form-note {
+    font-size: 0.82rem;
+    color: #888;
+    text-align: center;
+  }
 </style>
 </head>
 <body>
@@ -128,14 +244,22 @@
   <span class="badge">📖 Hafiz-e-Quran</span>
 </header>
 
+<nav class="nav">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#testimonials">Reviews</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 <div class="container">
 
-  <div class="card">
+  <div class="card" id="about">
     <h2>About Me</h2>
     <p>I'm a BBA student based in Karachi, Pakistan, working as a freelancer alongside my studies. I specialize in accurate data entry and copy-paste work, and I also teach Quran online as a certified Hafiz. I'm detail-oriented, reliable, and committed to delivering quality work on time.</p>
   </div>
 
-  <div class="card">
+  <div class="card" id="services">
     <h2>Services</h2>
     <div class="services">
       <div class="service-item">
@@ -204,7 +328,57 @@
     </div>
   </div>
 
-  <div class="card">
+  <div class="card" id="portfolio">
+    <h2>Portfolio / Work Samples</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <div class="thumb">📊</div>
+        <div class="info">
+          <h3>Excel Data Cleanup</h3>
+          <p>500+ row product dataset cleaned, organized, and formatted for an e-commerce client.</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="thumb">📄</div>
+        <div class="info">
+          <h3>PDF to Word Conversion</h3>
+          <p>Scanned bank document converted into a fully editable, accurately formatted Word file.</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="thumb">🎓</div>
+        <div class="info">
+          <h3>Assignment Formatting</h3>
+          <p>University assignment reformatted with proper headings, citations, and layout.</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="thumb">📽️</div>
+        <div class="info">
+          <h3>Business Presentation</h3>
+          <p>10-slide professional PowerPoint deck designed for a university management project.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="testimonials">
+    <h2>Client Reviews</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="quote">"Abdullah delivered my data entry project early and the formatting was spot on. Will hire again."</p>
+        <div class="author">— Sample review (placeholder)</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="quote">"Great communication and very patient with revisions. Highly recommend for PDF conversion work."</p>
+        <div class="author">— Sample review (placeholder)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="contact">
     <h2>Get in Touch</h2>
     <div class="contact-list">
       <a class="contact-item" href="https://wa.me/923163409550" target="_blank">
@@ -217,6 +391,13 @@
         <span class="icon">🔗</span> LinkedIn Profile
       </a>
     </div>
+
+    <form class="contact-form" onsubmit="sendToWhatsApp(event)">
+      <input type="text" id="cf-name" placeholder="Your Name" required>
+      <textarea id="cf-message" rows="4" placeholder="Your message..." required></textarea>
+      <button type="submit">Send via WhatsApp</button>
+    </form>
+    <p class="form-note">Clicking send will open WhatsApp with your message pre-filled.</p>
   </div>
 
 </div>
@@ -224,6 +405,16 @@
 <footer>
   &copy; 2026 Abdullah Shah. All rights reserved.
 </footer>
+
+<script>
+  function sendToWhatsApp(e) {
+    e.preventDefault();
+    const name = document.getElementById('cf-name').value;
+    const message = document.getElementById('cf-message').value;
+    const text = encodeURIComponent(`Hi, my name is ${name}.\n\n${message}`);
+    window.open(`https://wa.me/923163409550?text=${text}`, '_blank');
+  }
+</script>
 
 </body>
 </html>
